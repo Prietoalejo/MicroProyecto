@@ -1,0 +1,44 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2f7; /* Un azul claro */
+    color: #2c3e50; /* Gris oscuro para el texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; /* Para que el padding no cause desbordamiento */
+}
+
+h1 {
+    color: #1a5276; /* Un azul más oscuro */
+    margin-bottom: 20px;
+}
+
+#parrafo-dinamico {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #aed6f1;
+    border-radius: 8px;
+    background-color: #f7f9fc;
+}
+
+button {
+    background-color: #28a745; /* Verde vibrante */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+button:hover {
+    background-color: #218838; /* Verde un poco más oscuro al pasar el ratón */
+}
