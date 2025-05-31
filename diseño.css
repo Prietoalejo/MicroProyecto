@@ -1,0 +1,191 @@
+
+/* =============================
+   Estilos Trivia de Programación
+   ============================= */
+:root {
+    --fondo-principal: #e0f7fa;
+    --primario: #7c4dff;
+    --primario-oscuro: #512da8;
+    --acento: #00bcd4;
+    --color-correcto: #43a047;
+    --color-incorrecto: #e53935;
+    --texto: #333;
+    --blanco: #fff;
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--texto);
+}
+body, html {
+    min-height: 100vh;
+    background: var(--fondo-principal);
+}
+#contenedor {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seccion {
+    background: var(--blanco);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(60,60,60,0.08);
+    padding: 3rem 4rem;
+    min-width: 32rem;
+    max-width: 40rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.flex-column {
+    flex-direction: column;
+}
+.hidden {
+    display: none !important;
+}
+h1 {
+    font-size: 4rem;
+    color: var(--primario);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+h2 {
+    font-size: 2.4rem;
+    color: var(--primario-oscuro);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+input[type="text"] {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    outline: none;
+    transition: border 0.2s;
+}
+input[type="text"]:focus {
+    border: 1.5px solid var(--primario);
+}
+.btn {
+    background: var(--primario);
+    color: var(--blanco);
+    border: none;
+    border-radius: 0.8rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(124,77,255,0.08);
+}
+.btn:disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
+}
+.btn:hover:not(:disabled) {
+    background: var(--primario-oscuro);
+}
+.encabezado-quiz {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+.temporizador {
+    background: var(--acento);
+    color: var(--blanco);
+    padding: 0.5rem 1.2rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.pregunta {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+.option-btn {
+    background: var(--blanco);
+    border: 2px solid var(--primario);
+    color: var(--primario-oscuro);
+    border-radius: 0.8rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    text-align: left;
+}
+.option-btn:hover:not(:disabled) {
+    background: var(--acento);
+    color: var(--blanco);
+    border: 2px solid var(--acento);
+}
+.option-btn.correct {
+    background: var(--color-correcto);
+    color: var(--blanco);
+    border: 2px solid var(--color-correcto);
+}
+.option-btn.incorrect {
+    background: var(--color-incorrecto);
+    color: var(--blanco);
+    border: 2px solid var(--color-incorrecto);
+}
+.retroalimentacion {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem 0;
+    min-height: 2.5rem;
+    text-align: center;
+}
+.info-resultado {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.tabla-ranking {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+.tabla-ranking th, .tabla-ranking td {
+    border: 1px solid #ccc;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.tabla-ranking th {
+    background: var(--primario);
+    color: var(--blanco);
+}
+@media (max-width: 600px) {
+    .seccion {
+        padding: 1.5rem 0.5rem;
+        min-width: unset;
+        max-width: 100vw;
+    }
+    #contenedor {
+        padding: 0;
+    }
+}
