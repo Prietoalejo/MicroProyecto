@@ -126,7 +126,21 @@ inputNombreUsuario.addEventListener('input', () => {
     botonIniciar.disabled = inputNombreUsuario.value.trim() === '';
 });
 
+// para permitir iniciar el juego con la tecla Enter
+document.addEventListener('keydown', function(event) {
+    if (
+        event.key === "Enter" &&
+        document.activeElement === inputNombreUsuario &&
+        inputNombreUsuario.value.trim() !== ''
+    ) {
+        iniciarJuego();
+    }
+});
+// para iniciar el juego al hacer clic en el botón
+
+
 botonIniciar.addEventListener('click', iniciarJuego);
+
 function iniciarJuego() {
     nombreUsuario = inputNombreUsuario.value.trim();
     if (!nombreUsuario) {
