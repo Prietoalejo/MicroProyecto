@@ -80,10 +80,10 @@ const preguntas = [
 let indicePreguntaActual = 0;
 let puntaje = 0;
 let intervaloTemporizador;
-let tiempoRestante = 300;
+let tiempoRestante = 300; 
 let nombreUsuario = '';
 let preguntasQuiz = [];
-const DURACION_QUIZ_SEGUNDOS = 300;
+const DURACION_QUIZ_SEGUNDOS = 240;
 const NUM_PREGUNTAS_POR_QUIZ = 10;
 
 // 3. Referencias a elementos HTML
